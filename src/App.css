@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+/* Adding styles for the entire app in this file, because the app is so small that separate files will be unnecesary. */
+
+
+/* Styling for the input form. */
+button {
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.1s;
+    box-shadow: 1px 1px 5px rgb(122, 122, 122);
+    transition: background-color 0.2s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-todo-form {
+    max-width: fit-content;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px gray;
+    background-color: rgb(64, 150, 225);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-todo-form input {
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    font-size: x-large;
+    background-color: rgb(230, 230, 230);
+}
+/* Styling for the to-dos. */
+ul {
+    list-style: none;
+    padding: 10px;
+    margin: 20px auto;
+}
+/* For both complete and incomplete to-dos. */
+.complete-todo, .incomplete-todo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto 20px;
+    border-radius: 7px;
+    margin: 15px auto;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 7px rgb(94, 94, 94);
+    transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-content {
+    width: 600px;
+    padding: 10px;
+    font-size: x-large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-buttons {
+    display: flex;
+    gap: 10px;
 }
+/* For complete to-dos */
+.complete-todo {
+    background-color: gainsboro;
+}
+
+.complete-todo .todo-content {
+    text-decoration: line-through;
+}
+/* For incomplete to-dos */
+.incomplete-todo {
+    background-color: rgb(137, 214, 255);
+}
+/* Buttons on the to-do. */
+.edit-button {
+    background-color: rgb(225, 225, 119);
+}
+
+.delete-button {
+    background-color: rgb(229, 101, 101);
+}
+
+.complete-button {
+    background-color: rgb(94, 197, 94);
+}
+/* When the todos are complete also change the styling of the edit and complete buttons. */
+.complete-todo .edit-button {
+    background-color: rgb(203, 203, 203);
+}
+
+.complete-todo .complete-button {
+    text-decoration: line-through;
+    background-color: rgb(203, 203, 203);
+}
+

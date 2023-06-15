@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+//Importing the inputform and the todos display components.
+import InputForm from './components/InputForm';
+import DisplayTodos from './components/DisplayTodos';
 
 function App() {
+  //Displaying imported components.
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InputForm />
+      <DisplayTodos />
     </div>
   );
 }
